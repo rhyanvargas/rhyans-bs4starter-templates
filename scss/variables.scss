@@ -1,0 +1,36 @@
+$fa-font-path: "./fonts";
+
+// Colors
+$orange: #f84c00;
+$orange-dark: #c43d00;
+$dark: #000000;
+$gray: #a0a8b0;
+$gray-light: #ceced2;
+$light:#f6f8f4;
+$white: #FFFFFF;
+
+$theme-colors: (
+   "primary": $orange,
+   "primary-dark": $orange-dark,
+   "secondary": $dark,
+   "tertiary": $gray,
+   "tertiary-light": $gray-light,
+   "light": $light,
+   "white": $white,
+//    "danger": #D5573B,
+//    "warning": #F2AF29,
+//    "light": #fff,
+//    "dark": #231e21,
+//    "accent": $blue
+);
+
+
+// Remove Colors
+// $theme-colors: map-remove($theme-colors, "success", "info", "danger", "warning", "accent");
+
+// Use the theme colors
+//  color: theme-color("primary");
+
+// Tint tertiary Color
+//  text: theme-color-level("tertiary", - 1.5)
+//  backgrounds: theme-color-level("tertiary", - 10.8)

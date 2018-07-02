@@ -1,0 +1,161 @@
+// Fonts
+// -->  @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:100,300,400,500,700');
+
+// Font Variables
+// $roboto: 'Roboto', sans-serif;  
+// $playfair: 'Playfair Display', serif;
+// $font-lightest:100;
+// $font-light:300;
+// $font-med: 400;
+// $font-bold: 500;
+// $font-bolder: 700;
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+h1,h2,h3,h4 {
+    color: theme-color("primary");
+    font-family: $playfair;
+}
+
+h1 {
+    font-size: 5rem; //80px
+    margin-bottom: 40px;
+    line-height: 0.85;
+    @media (max-width: map-get($grid-breakpoints, sm) - 1) {
+        font-size: 2.2rem; 
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+}
+
+h2 {
+    font-size: 2rem; // 32px
+    margin-bottom: 40px;
+    @media (max-width: map-get($grid-breakpoints, sm) - 1) {
+        font-size: 1.7rem; 
+    }
+}
+
+h3 {
+    font-size: 1.5rem; // 19.2px
+    font-weight: $font-med;
+    margin-bottom: 30px;
+    @media (max-width: map-get($grid-breakpoints, sm) - 1) {
+        margin-bottom: 20px;
+        font-size: 1.2rem; 
+    }
+}
+h4 {
+    font-size: 1rem; // 
+    font-weight: $font-med;
+    margin-bottom: 15px;
+}
+
+p {
+    font-family: $roboto;
+    font-size: 14px; 
+    font-weight: $font-lightest;
+    margin-bottom: 10px;
+    &.lead {
+        margin-bottom: 40px;
+        font-weight: $font-lightest;
+        @media (max-width: map-get($grid-breakpoints, sm) - 1) {
+            font-size: 1.10rem;
+            margin-bottom: 30px;
+        }
+    }
+    &.sub-title {
+        color: theme-color("dark");
+        text-align: center;
+        margin-bottom: 60px;
+    }
+}
+
+span {
+    @extend p;
+
+}
+
+button,
+.button {
+    color: theme-color("light");
+    font-family: $roboto;
+    font-size: 12px;
+    font-weight: $font-bold;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    @media (max-width: map-get($grid-breakpoints, sm) - 1) {
+        letter-spacing: 1px;
+    }
+}
+
+a {
+    color: inherit;
+    &:hover {
+        color:  theme-color("secondary");
+        text-decoration: none;
+    }
+}
+
+ul {
+    padding: 0;
+    &.two-columns {
+        columns: 2;
+    }
+    li {
+        font-size: 14px; 
+        list-style: none;
+    }
+}
+.bullet {
+    &:before {
+        content: '\f105';
+        color: theme-color("secondary");
+        // display: none;
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 400;
+        margin-right: 8px;
+        text-decoration: none;
+    }  
+}
+
+hr {
+    background-color:theme-color-level("tertiary", - 1.5);
+    opacity: 0.3;
+    &.hr--short {
+        max-width: 150px;
+    }
+    &.hr--left {
+        margin-right: auto;
+        margin-left: 0;
+    }
+}
+
+// Specific Elements
+.navbar-nav {
+    font-size: 14px;
+    a {
+        padding: 0;
+    }
+}
+i,svg {
+    color: theme-color("primary"); 
+}
+
+// Utilities
+.text-2-columns {
+    columns: 2;
+    column-gap: 70%;
+}
+
+.active {
+    color: theme-color('primary');
+    font-weight: $font-bold;
+}
+
+// Icons
