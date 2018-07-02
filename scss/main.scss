@@ -1,0 +1,15 @@
+html {
+    font-size: 62.5%; // 1rem = 10px (10px / 16px)
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        font-size: 75%; //1 rem = 14px, 14px/16 = 75%
+    }
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        font-size: 87.5%; //1 rem = 14px, 14px/16 = 87.5%
+    }
+    @media (min-width: map-get($grid-breakpoints, xl)) {
+        font-size: 100%; //1 rem = 16px, 100%
+    }
+}
+body {
+    font-size: 1.6rem;
+}
